@@ -1,0 +1,19 @@
+@model List<PortfolioApp.Models.ProjectItem>
+@{ ViewData["Title"] = "MERT KOK - PORTFOLIO"; }
+
+<h2 class="mb-4 fw-bold">MERT KOK - PORTFOLIO</h2>
+<div class="row">
+    @foreach(var item in Model)
+    {
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm border-0 bg-light">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">@item.Title</h5>
+                    <h6 class="card-subtitle mb-3 text-primary">@item.Technologies</h6>
+                    <p class="card-text">@item.Description</p>
+                    <a href="@item.GithubUrl" target="_blank" class="btn btn-dark btn-sm">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
