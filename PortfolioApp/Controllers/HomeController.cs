@@ -1,34 +1,33 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using PortfolioApp.Models;
+using PortfolioApp.Services; // Bu satırı ekle
 
-namespace PortfolioApp.Controllers;
-
-public class HomeController : Controller
+namespace PortfolioApp.Controllers
 {
-    public IActionResult Index()
+    public class HomeController : Controller
     {
-        return View();
-    }
+        private readonly IProjectService _projectService;
 
-    public IActionResult Contact()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
-
-    public IActionResult Projects()
-    {
-        var myProjects = new List<ProjectItem>
+        // Servisi constructor (yapıcı metot) ile içeri alıyoruz
+        public HomeController(IProjectService projectService)
         {
-            new ProjectItem { Title = "Image Compressor", Description = "A Python script to optimize profile pictures for web.", Technologies = "Python, Pillow", GithubUrl = "https://github.com/KULLANICI_ADIN/image-compressor-python" },
-            new ProjectItem { Title = "E-Commerce REST API", Description = "Backend service with JWT authentication and CRUD operations.", Technologies = "C#, ASP.NET Core, EF Core", GithubUrl = "#" }
-        };
-        return View(myProjects);
+            _projectService = projectService;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        // Projects action'ını asenkron yapıp verileri View'a gönderiyoruz
+        public async Task<IActionResult> Projects()
+        {
+            var projects = await _projectService.GetAllProjectsAsync();
+            return View(projects);
+        }
     }
 }
