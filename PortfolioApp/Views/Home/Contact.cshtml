@@ -1,10 +1,44 @@
-﻿@{ ViewData["Title"] = "Contact Me"; }
+﻿@{
+    ViewData["Title"] = "Contact Me";
+}
 
-<h2 class="mb-4 fw-bold">Get In Touch</h2>
-<p class="lead">I am currently looking for new opportunities in London. Feel free to reach out!</p>
+<div class="container mt-4">
+    <h2 class="fw-bold mb-4 border-bottom pb-2">Get In Touch</h2>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <p class="lead">I am currently looking for new opportunities in the London .NET market. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+            
+            <ul class="list-unstyled mt-4">
+                <li class="mb-3"><strong>Email:</strong> mert95.info@gmail.com</li>
+                <li class="mb-3"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mert-kok" target="_blank" class="text-decoration-none">linkedin.com/in/mertkok</a></li>
+                <li class="mb-3"><strong>Location:</strong> London, UK (Target Market)</li>
+            </ul>
 
-<ul class="list-unstyled mt-4 fs-5">
-    <li class="mb-2"><strong>Email:</strong> <a href="mailto:mert95.info@gmail.com" class="text-decoration-none">senin@emailin.com</a></li>
-    <li class="mb-2"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mert-kok" target="_blank" class="text-decoration-none">linkedin.com/in/KULLANICI_ADIN</a></li>
-    <li><strong>GitHub:</strong> <a href="https://github.com/MertKok95" target="_blank" class="text-decoration-none">github.com/KULLANICI_ADIN</a></li>
-</ul>
+            <a href="/files/CV.pdf" download class="btn btn-primary mt-3 shadow-sm">
+                Download My CV (.pdf)
+            </a>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 bg-light">
+                <div class="card-body p-4">
+                    <form action="mailto:mert95.info@gmail.com" method="post" enctype="text/plain">
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-bold">Name</label>
+                            <input type="text" class="form-control" id="name" name="Name" required placeholder="John Doe">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control" id="email" name="Email" required placeholder="john@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-bold">Message</label>
+                            <textarea class="form-control" id="message" name="Message" rows="4" required placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

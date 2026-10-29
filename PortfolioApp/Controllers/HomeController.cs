@@ -29,5 +29,10 @@ namespace PortfolioApp.Controllers
             var projects = await _projectService.GetAllProjectsAsync();
             return View(projects);
         }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
     }
 }
