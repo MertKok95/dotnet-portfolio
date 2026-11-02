@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using PortfolioApp.Services; // Bu satırı ekle
+using PortfolioApp.Services; 
 
 namespace PortfolioApp.Controllers
 {
@@ -18,29 +18,7 @@ namespace PortfolioApp.Controllers
             return View();
         }
 
-        public IActionResult Index2()
-        {
-            return View();
-        }
-
-        public IActionResult About()
-        {
-            return View();
-        }
-
-        // Projects action'ını asenkron yapıp verileri View'a gönderiyoruz
         public async Task<IActionResult> Projects()
-        {
-            var projects = await _projectService.GetAllProjectsAsync();
-            return View(projects);
-        }
-
-        public IActionResult Contact()
-        {
-            return View();
-        }
-
-        public async Task<IActionResult> Gallery()
         {
             var projects = await _projectService.GetAllProjectsAsync();
             return View(projects);

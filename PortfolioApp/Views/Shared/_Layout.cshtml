@@ -33,12 +33,10 @@
     <link rel="stylesheet" type="text/css" href="/css/layout-tablet.css">
     <link rel="stylesheet" type="text/css" href="/css/layout-desktop.css">
 
-    <!-- Component'ler (Butonlar, sekmeler) her şeyden sonra yüklenmeli ki çerçeve stilleri ezilmesin -->
     <link rel="stylesheet" type="text/css" href="/css/components.css">
 
     @await RenderSectionAsync("Styles", required: false)
 
-    <!-- En son senin yazdığın ezici (override) stiller -->
     <link rel="stylesheet" href="~/css/site.css">
 
     <!-- INITIAL SCRIPTS -->
@@ -55,18 +53,11 @@
         
         <!-- header -->
         <header id="masthead" class="site-header" role="banner">
- 			
-            
             <!-- site-navigation -->
             <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-                
-                
-                
                 <!-- layout-medium -->
                 <div class="layout-medium">
-                
                     <a class="menu-toggle"><span class="lines"></span></a>
-                    
                     <!-- nav-menu -->
                     <div class="nav-menu">
                         <ul>
@@ -76,38 +67,25 @@
                         </ul>
                     </div>
                     <!-- nav-menu -->
-                    
                 </div>
                 <!-- layout-medium -->
-                
             </nav>
             <!-- site-navigation -->
-            
-            
-            
-            
-            
-            		
         </header>
         <!-- header -->
         
         @RenderBody()
         
-        
         <!-- site-footer -->
         <footer id="colophon" class="site-footer" role="contentinfo">
-			
             <!-- .site-info -->
             <div class="site-info">
-            	
                 <!-- layout-medium -->
             	<div class="layout-medium">
                 
             		<div class="textwidget">&copy; 2026 Mert Kok. All rights reserved.</div>
-                
                 </div>
             	<!-- layout-medium -->
-            
             </div>
             <!-- .site-info -->
 		</footer>
@@ -118,11 +96,13 @@
 
     <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
     <script>
 	   if (!window.jQuery) { 
 		  document.write('<script src="js/jquery-3.1.1.min.js"><\/script>'); 
 	   }
 	</script>
+
     <script src="/js/vendor/jquery-migrate-3.0.0.min.js"></script>
     <script src="/js/vendor/fastclick.js"></script>
     <script src="/js/vendor/jquery.fitvids.js"></script>

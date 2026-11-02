@@ -411,8 +411,6 @@
 		}
 		// ------------------------------
 
-
-		
 		
 		// ------------------------------
         // FIXED NAV MENU	
@@ -471,20 +469,12 @@
 		  event.preventDefault();
 		});
 			
-		
-		// checks if navigation’s popover is shown
-		// function showHideNav() {
-		//   if ($html.hasClass('menu-expanded')) {
-		// 	hideNav();
-		//   } else {
-		// 	showNav();
-		//   }
-		// }
+
 		// shows the navigation’s popover
 		function showNav() {
 		  setTimeout(function() { $('.search-container input[type="search"]').trigger('focus'); },300);
 		  $html.removeClass('menu-invisible').addClass('menu-expanded');
-		  window.setTimeout(function(){$('body').addClass('no_scroll');}, 200); // Firefox hack. Hides scrollbar as soon as menu animation is done
+		  window.setTimeout(function(){$('body').addClass('no_scroll');}, 200); // Hides scrollbar as soon as menu animation is done
 		}
 		// hides the navigation’s popover
 		function hideNav() {
@@ -519,14 +509,10 @@
         // ------------------------------
         
 		
-
-		
 		// ------------------------------
 		// remove click delay on touch devices
 		FastClick.attach(document.body);
 		// ------------------------------
-		
-	
 		
 		
 		// ------------------------------
@@ -551,8 +537,6 @@
 		// ------------------------------
 		
 
-
-		
 		// ------------------------------
 		// MASONRY - ISOTOPE
 		$masonry_container = $('.masonry');
@@ -577,12 +561,8 @@
 		}
 		// ------------------------------
 		
-		
-		
-		
     });
     // DOCUMENT READY
-	
 	
 	
 	// WINDOW ONLOAD
@@ -598,14 +578,11 @@
 	// WINDOW ONLOAD	
 	
 	
-	
-	
 	// ------------------------------
 	// ------------------------------
 		// FUNCTIONS
 	// ------------------------------
 	// ------------------------------
-	
 	
 	
 	// ------------------------------
@@ -661,7 +638,7 @@
 	
 	
 	// ------------------------------
-	// MASONRY LAYOUT : changes the number of masonry columns based on the current container's width
+	// LAYOUT Design: changes the number of columns based on the current container's width
 	function setMasonry() {
 		
 		var itemW = $masonry_container.data('item-width');
@@ -693,7 +670,6 @@
 		$masonry_container.isotope( 'option', { masonry: { columnWidth: columnWidth } } );
 	}
 	// ------------------------------
-	
 	
 	
 })(jQuery);

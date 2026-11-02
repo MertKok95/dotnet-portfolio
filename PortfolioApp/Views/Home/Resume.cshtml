@@ -19,7 +19,7 @@
 <!-- site-main -->
 <div id="main" class="site-main">
     
-    <!-- Ekranı genişleten ana kapsayıcı -->
+    <!-- Main container that expands the screen -->
     <div style="max-width: 1400px; margin: 0 auto; padding: 0 40px;">
         <div id="primary" class="content-area">
             
@@ -44,7 +44,7 @@
                         <!-- row -->
                         <div class="row">
             
-                            <!-- 1. SOL KOLON (İŞ GEÇMİŞİ) -->
+                            <!-- 1. LEFT COLUMN (WORK HISTORY) -->
                             <div class="col-md-4 col-sm-12" style="padding-right: 35px;">
                                         
                                 <!-- TIMELINE -->
@@ -101,9 +101,9 @@
                                 <!-- TIMELINE -->
             
                             </div>
-                            <!-- 1. SOL KOLON BİTİŞ -->
+                            <!-- 1. END OF LEFT COLUMN -->
 
-                            <!-- 2. ORTA KOLON (EĞİTİM GEÇMİŞİ) -->
+                            <!-- 2. MIDDLE COLUMN (EDUCATIONAL BACKGROUND) -->
                             <div class="col-md-4 col-sm-12" style="padding: 0 25px;">
                                 
                                 <div class="timeline">
@@ -140,9 +140,9 @@
                                 </div>
 
                             </div>
-                            <!-- 2. ORTA KOLON BİTİŞ -->
+                            <!-- 2. END OF MIDDLE COLUMN -->
             
-                            <!-- 3. SAĞ KOLON (YETENEKLER & SERTİFİKALAR) -->
+                            <!-- 3. RIGHT COLUMN (SKILLS & CERTIFICATIONS) -->
                             <div class="col-md-4 col-sm-12" style="padding-left: 35px;">
             							
                                 <h3 style="margin-bottom: 25px; font-size: 18px;">BACKEND & ARCHITECTURE</h3>
@@ -200,7 +200,7 @@
             
                                 <h3 style="margin-bottom: 25px; font-size: 18px;">CERTIFICATIONS & INTERESTS</h3>
             
-                                <!-- Sertifikalar Kutusu -->
+                                <!-- Certificates Box -->
                                 <div class="testo" style="padding: 25px; margin-bottom: 30px; background-color: #fcfcfc; border: 1px solid #eaeaea; border-radius: 8px;">
                                     <h4 style="margin-bottom: 15px; font-weight: bold; font-size: 15px;">Certifications</h4>
                                     <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.6; color: #555; font-size: 14px;">
@@ -210,7 +210,7 @@
                                     </ul>
                                 </div>
         
-                                <!-- İlgi Alanları Kutusu -->
+                                <!-- Interests Box -->
                                 <div class="testo" style="padding: 25px; background-color: #fcfcfc; border: 1px solid #eaeaea; border-radius: 8px;">
                                     <h4 style="margin-bottom: 15px; font-weight: bold; font-size: 15px;">Tech Interests</h4>
                                     <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.6; color: #555; font-size: 14px;">
@@ -220,7 +220,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- 3. SAĞ KOLON BİTİŞ -->
+                            <!-- 3. END OF RIGHT COLUMN -->
             
                         </div>
                         <!-- row -->
@@ -247,12 +247,11 @@
 @section Scripts {
     <script>
         $(document).ready(function () {
-            // Yüzdelik barları veri özelliğine (data-percent) göre animasyonlu doldur
+            // Animating percentage bars based on the data attribute (data-percent)
             $('.bar').each(function () {
                 var bar = $(this);
                 var percent = bar.attr('data-percent');
                 
-                // Arka planı garantilemek için CSS uygulayıp, ardından genişliği animasyonla veriyoruz
                 bar.css({
                     'position': 'relative',
                     'width': '100%',
@@ -267,11 +266,11 @@
                     'top': '0',
                     'left': '0',
                     'height': '100%',
-                    'background': '#2BBE8D', // Tema yeşili
-                    'width': '0' // Başlangıçta sıfır
+                    'background': '#2BBE8D', 
+                    'width': '0' 
                 }).animate({
                     width: percent + '%'
-                }, 1500); // 1.5 saniyede dolma animasyonu
+                }, 1500);
             });
         });
     </script>
