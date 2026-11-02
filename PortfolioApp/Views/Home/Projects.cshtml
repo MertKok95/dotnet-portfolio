@@ -1,31 +1,64 @@
 @model List<PortfolioApp.Models.Project>
-@{ ViewData["Title"] = "MERT KOK - PORTFOLIO"; }
 
-<h2 class="mb-4 fw-bold">MERT KOK - PORTFOLIO</h2>
-<div class="row">
-    @foreach(var item in Model)
-    {
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 shadow-sm border-0 bg-light">
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "MERT KOK - PORTFOLIO";
+}
 
-                @if (!string.IsNullOrEmpty(item.ImageUrl))
-                {
-                    <a href="@item.ImageUrl" data-lightbox="portfolio-gallery" data-title="@item.Title">
-                        <img src="@item.ImageUrl" class="card-img-top" alt="@item.Title" style="height: 200px; object-fit: cover; cursor: pointer;">
-                    </a>
-                }
+<!-- site-main -->
+<div id="main" class="site-main">
+    <div class="layout-medium">
+        <div id="primary" class="content-area">
+             
+            <!-- site-content -->
+            <div id="content" class="site-content" role="main"> <!-- .hentry -->
+                <article class="hentry post single-post format-gallery">
+                    <!-- .entry-header -->
+                    <header class="entry-header">
+                        <!-- .entry-title -->
+                        <h1 class="entry-title">Portfolio</h1>
+                    </header>
+                    <!-- .entry-header -->
+                                                      
+                    <!-- .entry-content -->
+                    <div class="entry-content">
+                                    
+                        <!-- .gallery -->
+                        <div class="gallery link-to-file">
 
-                <div class="card-body">
-                    <h5 class="card-title fw-bold">@item.Title</h5>
-                    <h6 class="card-subtitle mb-3 text-primary">@item.TechStack</h6>
-                    <p class="card-text">@item.Description</p>
-
-                    @if (!string.IsNullOrEmpty(item.GitHubUrl))
-                    {
-                        <a href="@item.GitHubUrl" target="_blank" class="btn btn-dark btn-sm">View on GitHub</a>
-                    }
+                            @foreach (Project item in Model)
+                            {
+                                <figure class="gallery-item">
+                                    <div class="gallery-icon landscape">
+                                        <a href="@item.ImageUrl">
+                                            <img src="@item.ImageUrl" class="attachment-thumbnail" alt="@item.Title">
+                                        </a>
+                                    </div>
+        
+                                    <!-- Temanın JS dosyası veriyi tam olarak bu figcaption bloğundan çekiyor -->
+                                    <figcaption class="wp-caption-text gallery-caption">
+                                        <strong class="mfp-proj-title">@item.Title</strong><br />
+                                        <span class="mfp-proj-tech" style="font-size: 10px; opacity: 0.8;">[ @item.TechStack
+                                            ]</span>
+            
+                                            <!-- Açıklama ızgarada gizli kalır, ancak eklenti okuyup büyük ekrana yansıtır -->
+                                            <span class="mfp-proj-desc" style="display: none;"> <br /><br /> @item.Description
+                                            </span>
+                                        </figcaption>
+                                    </figure>
+                                }
+                            </div>
+                            <!-- .gallery -->
+                        </div>
+                        <!-- .entry-content -->
+                    </article>
+                    <!-- .hentry -->
                 </div>
+                <!-- site-content -->
             </div>
+            <!-- primary -->
         </div>
-    }
-</div>
+        <!-- layout -->
+    </div>
+    <!-- site-main -->
+        

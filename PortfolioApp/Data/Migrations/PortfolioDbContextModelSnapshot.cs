@@ -51,18 +51,74 @@ namespace PortfolioApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "Büyük ölçekli e-ticaret sistemleri için geliştirilmiş, yüksek performanslı RESTful API mimarisi.",
+                            Description = "A web application providing real-time messaging where users can join anonymous chat rooms by selecting an avatar. Built with SignalR infrastructure to ensure seamless real-time communication.",
                             ImageUrl = "/images/project/project1.png",
-                            TechStack = ".NET 8, Web API, SQLite, Clean Architecture",
-                            Title = "E-Commerce API"
+                            TechStack = ".NET 8, SignalR, Bootstrap, MVC",
+                            Title = "Dancing Chat App"
                         },
                         new
                         {
                             Id = 2,
-                            Description = "SignalR kullanılarak geliştirilmiş, anlık veri akışı ve grafik güncellemeleri sunan web uygulaması.",
+                            Description = "A B2C e-commerce platform focused on clothing and accessories, featuring a modern UI. Developed with secure payment gateway integration (Iyzico) and category-based product filtering.",
                             ImageUrl = "/images/project/project2.png",
-                            TechStack = ".NET 8, SignalR, Bootstrap 5, MVC",
-                            Title = "Real-Time Dashboard"
+                            TechStack = ".NET 8, Web API, SQLite, Clean Architecture",
+                            Title = "E-Commerce"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "A mobile application allowing users to discover and share food recipes and events. Developed natively in Android Studio using Java.",
+                            ImageUrl = "/images/project/project3.png",
+                            TechStack = "Java, Android Studio",
+                            Title = "Food Sharing App"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "A time-constrained mobile educational puzzle game where users guess words based on visual clues. Developed as a cross-platform app using Flutter, featuring a simple and user-friendly interface.",
+                            ImageUrl = "/images/project/project4.png",
+                            TechStack = "Flutter, Dart, Mobile UI",
+                            Title = "Basic Word Game App"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "A comprehensive cross-platform cargo management mobile application developed using Flutter for logistics personnel, digitizing field operations such as goods receipt, barcode scanning, bagging, and manifest management.",
+                            ImageUrl = "/images/project/project5.png",
+                            TechStack = "Flutter, Dart, .NET 5, Python (Django) API",
+                            Title = "Logistics App"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Description = "A secure financial mobile portfolio management app developed for brokerage firms, enabling users to monitor live market data and execute stock and fund trades.",
+                            ImageUrl = "/images/project/project6.png",
+                            TechStack = "Flutter, .NET API, Node.js, WebSockets",
+                            Title = "Stock Market App"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Description = "A modern marketplace demo web application featuring a wallet connection concept, allowing users to discover digital artwork (NFTs). Developed using the .NET Core 3.1 framework with MVC architecture.",
+                            ImageUrl = "/images/project/project7.png",
+                            TechStack = ".NET Core 3.1, MVC, Bootstrap, HTML/CSS",
+                            Title = "NFT Market Demo"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Description = "A corporate showcase and B2B communication platform providing digital music distribution and licensing services for independent artists.",
+                            ImageUrl = "/images/project/project8.png",
+                            TechStack = ".NET MVC, Bootstrap, B2B Integration",
+                            Title = "Music Delly Distribution Platform"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Description = "A multilingual corporate web project developed for the textile industry, showcasing the company's production capacity, R&D initiatives, and product catalogs.",
+                            ImageUrl = "/images/project/project9.png",
+                            TechStack = ".NET MVC, HTML, CSS, JavaScript",
+                            Title = "Textile Corporate Web App"
                         });
                 });
 #pragma warning restore 612, 618

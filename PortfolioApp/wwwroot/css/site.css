@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  margin-bottom: 0;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -28,4 +28,239 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+/* Magnific Popup Orijinal Ok ve İkon Çözümü (default-skin.svg) */
+button.mfp-arrow::before, button.mfp-arrow::after, button.mfp-arrow .mfp-b, button.mfp-arrow .mfp-a {
+    display: none !important; /* Eklentinin varsayılan sorunlu CSS üçgenlerini iptal et */
+}
+
+button.mfp-arrow {
+    background-color: transparent !important;
+    width: 70px !important; 
+    height: 100px !important; 
+    opacity: 0.9 !important;
+}
+
+button.mfp-close,
+button.mfp-arrow::before {
+    display: block !important;
+    background-image: url('../images/default-skin.svg') !important; /* SVG sprite dosyasının yolu */
+    background-repeat: no-repeat !important;
+    background-size: 264px 88px !important; 
+}
+
+button.mfp-arrow::before {
+    content: '' !important; 
+    position: absolute !important; 
+    top: 35px !important; 
+    height: 30px !important; 
+    width: 32px !important; 
+    border: 0 !important; 
+    margin: 0 !important;
+}
+
+/* Sol Ok Konumu ve Boyutlandırması */
+button.mfp-arrow-left::before {
+    left: 10px !important; 
+    background-position: -138px -44px !important; 
+    transform: scale(1.8) !important; /* Oku vektörel olarak %180 büyütür */
+}
+
+/* Sağ Ok Konumu ve Boyutlandırması */
+button.mfp-arrow-right::before {
+    left: auto !important; 
+    right: 10px !important; 
+    background-position: -94px -44px !important; 
+    transform: scale(1.8) !important; /* Oku vektörel olarak %180 büyütür */
+}
+
+/* Kapatma (X) İkonu Çakışma Düzeltmesi ve Boyutlandırma */
+button.mfp-close {
+    width: 44px !important; 
+    height: 44px !important; 
+    background-position: 0 -44px !important;
+    color: transparent !important; 
+    transform: scale(1.4) !important; /* Çarpı butonunu orantılı şekilde büyütür */
+}
+
+/* Görsel Boyutunu Ekrana Göre Sabitleme ve Yazıya Yer Açma */
+img.mfp-img {
+    max-height: 80vh !important;
+    object-fit: contain !important;
+    padding: 20px 0 60px 0 !important; /* Alt tarafta yazının rahat durması için boşluk bıraktık */
+}
+
+/* 1. ALTYAZI (CAPTION) DÜZELTMESİ - YAZI GENİŞLİĞİ EKRANA GÖRE SABİTLENDİ */
+.mfp-title {
+    position: absolute !important; /* Metni dar resmin sınırından kurtarıp bağımsız yapar */
+    left: 50% !important;
+    transform: translateX(-50%) !important; /* Ekranın tam ortasına hizalar */
+    width: 90vw !important; /* Genişliği ekranın %90'ı kadar sabitler, daralmayı önler */
+    max-width: 800px !important; /* Masaüstünde yazının sonsuza uzamasını engeller */
+    font-size: 14px !important;
+    line-height: 1.6 !important; 
+    text-transform: none !important;
+    color: #ffffff !important;
+    padding-top: 15px !important;
+    text-align: center !important;
+    word-wrap: break-word !important;
+}
+
+/* Resmin altındaki siyah bar alanını düzenler */
+.mfp-bottom-bar {
+    margin-top: -30px !important;
+}
+
+/* 2. OKLARDAKİ VARSAYILAN METİNLERİ (<- ->) YOK ETME */
+button.mfp-arrow {
+    font-size: 0 !important;
+    color: transparent !important; 
+    border: none !important;
+}
+
+/* GİZLİ METİNLERİ (Description ve TechStack) GÖRÜNÜR YAPIP ŞEKİLLENDİRME */
+.mfp-title .mfp-proj-title {
+    font-size: 16px !important;
+    font-weight: bold !important;
+    display: block !important;
+}
+
+.mfp-title .mfp-proj-tech {
+    color: #2BBE8D !important; /* Tema yeşili */
+    font-size: 13px !important;
+    display: block !important;
+    margin-bottom: 5px !important;
+}
+
+.mfp-title .mfp-proj-desc {
+    display: block !important;
+    color: #e0e0e0 !important;
+    font-size: 14px !important;
+}
+
+/* Resmin arkasında uzayan çirkin gri/siyah kutuyu ve gölgeyi tamamen gizle */
+.mfp-figure::after {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+@font-face {
+    font-family: 'Rubik80sFade';
+    src: url('../fonts/logo.ttf') format('truetype'); /* Dosya adını logo.ttf olarak ayarladık */
+    font-weight: 400; /* Görseldeki Regular 400 değerine tam uyum */
+    font-style: normal;
+}
+
+/* Metin tabanlı logomuzun ayarları */
+.custom-text-logo {
+    font-family: 'Rubik80sFade', cursive, sans-serif !important;
+    font-size: 40px !important; /* Bu tarz retro fontlar biraz daha büyük puntoda kendini gösterir */
+    color: #222222 !important; 
+    text-decoration: none !important;
+    letter-spacing: 1px;
+    display: inline-block;
+    line-height: 1;
+}
+
+/* Noktayı veya harfi tema rengiyle vurgulamak istersen */
+.custom-text-logo span {
+    color: #2BBE8D !important; 
+}
+
+/* Mobil ekranlarda dönen metnin alt satıra geçince sola kaymasını engelle ve ortala */
+.intro h3, 
+.words-wrapper {
+    text-align: center !important;
+}
+
+/* Dar ekranlarda "I am a" ile mesleğin alt alta daha estetik durması için esneklik */
+@media (max-width: 767px) {
+    .words-wrapper {
+        display: block !important;
+        width: 100% !important; /* JS'in atadığı sabit genişliği ezip ekrana yayar */
+        margin-top: 5px;
+    }
+}
+
+/* JS'in oluşturduğu ana kapsayıcıyı esnek yapıya geçirip merkeze hizalar */
+.intro .figure-boxes {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+}
+
+/* Kutuların sola devrilmesini (float) engeller */
+.intro .figure-box {
+    float: none !important; 
+}
+
+/* Masaüstünde kutulara %25 yerine %33.33 alan vererek (Sol-Orta-Sağ) ekrana tam ve eşit dağıtır */
+@media screen and (min-width: 768px) {
+    .intro .figure-box {
+        width: 33.333333% !important; 
+    }
+}
+
+/* LİNKEDİN VE STANDART BUTON STİLLERİ (Garantili Çözüm) */
+a.button, .button {
+    display: inline-block !important; 
+    padding: 1.4em 2.4em !important; 
+    font-size: 11px !important; 
+    letter-spacing: 1px; 
+    outline: 0; 
+    background: #ffffff !important; 
+    color: #222222 !important; 
+    border: 2px solid #222222 !important; 
+    text-transform: uppercase; 
+    text-decoration: none !important;
+    font-weight: 600;
+    transition: all 0.2s ease-out !important;
+}
+
+/* Üzerine gelince orijinal siyah yerine tema yeşiliyle parlaması için ufak bir dokunuş */
+a.button:hover, .button:hover {
+    color: #ffffff !important; 
+    background: #2BBE8D !important; 
+    border-color: #2BBE8D !important;
+}
+
+/* YETENEK BARLARI ORİJİNAL TASARIMI */
+.skill-unit {
+    margin-bottom: 25px !important;
+}
+
+.skill-unit .bar {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: #eeeeee !important; /* Arka plan gri çizgi */
+    border-radius: 3px;
+}
+
+.skill-unit .bar .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* Başlangıç sıfır, JS dolduracak */
+    height: 100%;
+    background-color: #2BBE8D !important; /* Tema yeşili dolum */
+    border-radius: 3px;
+    transition: width 1.5s ease-out !important; /* Kayarak dolma animasyonu */
+}
+
+/* Çizginin ucundaki yuvarlak top ve rakam */
+.skill-unit .bar .progress span {
+    position: absolute;
+    top: -14px; /* Topu çizginin tam ortasına hizalar */
+    right: -15px; /* Topu yeşil barın tam ucuna oturtur */
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #ffffff !important;
+    background-color: #2BBE8D !important; /* Topun rengi */
+    border: 3px solid #ffffff !important; /* Topun etrafındaki beyaz çember */
+    padding: 0 7px;
+    border-radius: 50%; /* Kusursuz daire yapar */
+    z-index: 20;
 }

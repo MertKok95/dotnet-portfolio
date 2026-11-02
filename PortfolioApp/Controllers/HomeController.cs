@@ -18,6 +18,11 @@ namespace PortfolioApp.Controllers
             return View();
         }
 
+        public IActionResult Index2()
+        {
+            return View();
+        }
+
         public IActionResult About()
         {
             return View();
@@ -31,6 +36,17 @@ namespace PortfolioApp.Controllers
         }
 
         public IActionResult Contact()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Gallery()
+        {
+            var projects = await _projectService.GetAllProjectsAsync();
+            return View(projects);
+        }
+
+        public async Task<IActionResult> Resume()
         {
             return View();
         }

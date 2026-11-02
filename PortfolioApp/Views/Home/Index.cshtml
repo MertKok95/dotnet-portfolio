@@ -1,17 +1,76 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center mt-5">
-    <h1 class="display-4 fw-bold">Hi, I'm Mert Kok</h1>
-    <h2 class="text-muted">Software Developer based in London</h2>
-    <p class="lead mt-4">
-        I build modern, clean, and scalable web applications. 
-        My core expertise lies in <strong>C#, .NET 8, and SQL/NoSQL</strong> technologies.
-    </p>
-    
-    <div class="mt-4">
-        <a href="/Home/Projects" class="btn btn-primary btn-lg me-2">View My Projects</a>
-        <a href="https://github.com/MertKok95" target="_blank" class="btn btn-outline-dark btn-lg">My GitHub Profile</a>
+<!-- site-main -->
+<div id="main" class="site-main">
+    <div class="layout-medium">
+        <div id="primary" class="content-area">
+             
+            <!-- site-content -->
+            <div id="content" class="site-content" role="main"> 
+                <article class="hentry page">
+                            
+                    <!-- .entry-content -->
+                    <div class="entry-content intro" data-animation="rotate-1">
+                                
+                        <!-- YUVARLAK PROFİL FOTOĞRAFI -->
+                        <!-- Resim ile 'Hi' yazısının çakışmasını önlemek için geniş alt boşluk ve bağımsız katman eklendi -->
+                        <div style="text-align: center; margin-bottom: 30px; position: relative; z-index: 10;">
+                            <img alt="Mert Kok" src="/images/profile/profile.jpg" style="width: 170px; height: 170px; border-radius: 50%; object-fit: cover; border: 6px solid #b2b2b2; box-shadow: 0 10px 25px rgba(0,0,0,0.1); display: inline-block; background-color: #f4f4f4;" />
+                        </div>
+                                
+                        <!-- KİŞİSEL BAŞLIK VE DÖNEN METİN -->
+                        <!-- Temanın negatif boşluklarını ezmek ve yazıyı aşağı itmek için clear ve padding kullanıldı -->
+                        <!-- KİŞİSEL BAŞLIK VE DÖNEN METİN -->
+                        <div style="clear: both; padding-top: 20px; position: relative; z-index: 1;">
+                            <!-- em etiketi kaldırıldı, standart ve şık bir boyut verildi -->
+                            <h2 style="font-size: 38px; font-weight: bold; letter-spacing: -1px; margin-bottom: 15px;">Hi, I am Mert Kok</h2>
+                            <h3>I am a <strong>Software Engineer</strong> <strong>.NET Developer</strong> <strong>MSc AI Candidate</strong></h3>
+                        </div>
+                                
+                        <!-- .link-boxes -->
+                        <figure>
+                            <a href="/Resume"><img src="images/site/box-01.jpg" alt="Resume"></a>
+                            <figcaption class="wp-caption-text">Resume</figcaption>
+                        </figure>
+                                
+                        <figure>
+                            <a href="/Projects"><img src="images/site/box-02.jpg" alt="Projects"></a>
+                            <figcaption class="wp-caption-text">Projects</figcaption>
+                        </figure>
+                       
+                        <figure>
+                            <a href="https://github.com/mertkok" target="_blank"><img src="images/site/box-04.jpg" alt="GitHub"></a>
+                            <figcaption class="wp-caption-text">My GitHub</figcaption>
+                        </figure>
+                        <!-- .link-boxes -->
+
+                        <!-- Kutuların yan yana akışını temizle -->
+                        <div style="clear: both;"></div>
+
+                        <!-- LİNKEDİN BUTONU -->
+                        <p style="text-align: center; margin-top: 30px;">
+                            <a href="https://www.linkedin.com/in/mert-kok" target="_blank" class="button">
+                                <i class="icon-linkedin-squared"></i>My LinkedIn Profile
+                            </a>
+                        </p>
+                                	
+                    </div>
+                    <!-- .entry-content -->
+                                
+                </article>
+                <!-- .page -->
+                                 
+            </div>
+            <!-- site-content -->
+            
+        </div>
+        <!-- primary -->
+            
     </div>
+    <!-- layout -->
+        
 </div>
+<!-- site-main -->
