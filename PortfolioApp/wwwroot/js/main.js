@@ -510,12 +510,6 @@
         
 		
 		// ------------------------------
-		// remove click delay on touch devices
-		FastClick.attach(document.body);
-		// ------------------------------
-		
-		
-		// ------------------------------
 		// FORM VALIDATION
 		// comment form validation fix
 		$('#commentform, .mc4wp-form form').addClass('validate-form');
